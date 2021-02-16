@@ -43,7 +43,7 @@ int main()
         {
             for (int i = 0; i < BatteryBytesReceived; i++ )
             {
-                printf("Battery Byte[%d] received: %02X\n", RxBufferFromBattery[i]);
+                printf("Battery Byte[%d] received: %02X\n", i, RxBufferFromBattery[i]);
             }
         }
 
@@ -59,7 +59,7 @@ int main()
         {
             for (int i = 0; i < GatewayBytesReceived; i++ )
             {
-                printf("Gateway Byte[%d] received: %02X\n", RxBufferFromGateway[i]);
+                printf("Gateway Byte[%d] received: %02X\n", i, RxBufferFromGateway[i]);
             }
         }
 
