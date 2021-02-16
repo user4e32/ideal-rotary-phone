@@ -53,7 +53,7 @@ int main()
             BattUnencProt.Transmit(&TxBufferToBattery, sizeof(TxBufferToBattery);
         }
 
-        GatewayBytesReceived = BattProt.Receive(RxBuffer, RX_BUFFER_LENGTH);
+        GatewayBytesReceived = GatewayEncProt.Receive(RxBufferFromGateway, RX_BUFFER_LENGTH);
 
         if (GatewayBytesReceived > 0)
         {
@@ -66,7 +66,7 @@ int main()
         // assume user can set gSendPacketToGateway to true
         if (gSendPacketToGateway)
         {
-            BattUnencProt.Transmit(&TxBufferToGateway, sizeof(TxBufferToGateway);
+            GatewayEncProt.Transmit(&TxBufferToGateway, sizeof(TxBufferToGateway);
         }
         
         // OS delay in seconds
